@@ -1,0 +1,9 @@
+---
+# tasks file for apache2
+ - name: apache installation
+   apt: 
+    name: apache2
+    state: present
+ 
+    notify:
+      - Stop apache2
