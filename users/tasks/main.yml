@@ -1,0 +1,12 @@
+---
+# tasks file for users
+- name: user creation
+  user:
+   name: "{{ item }}"
+   state: present
+   password: test
+  with_items:
+   - nvrr
+   - vinay
+   - srini
+   - anand
