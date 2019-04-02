@@ -1,0 +1,16 @@
+---
+# tasks file for apache2
+ - name: apache installation
+   apt: 
+    name: apache2
+    state: latest
+ - name: git 
+   git:
+    repo: 'https://github.com/Nallamilliveerraghavareddy/webpage.git'
+    dest: /var/www/html/nvrr/
+    force: yes
+    accept_hostkey: yes
+ - name: gd
+   file:
+    name: "nvrr"
+    state: touch
